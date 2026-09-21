@@ -1,0 +1,110 @@
+/* Убираем отступы по умолчанию для корректного отображения на всю ширину[cite: 7] */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Максимальная ширина контента и меню 960px с выравниванием по центру[cite: 6] */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Очистка потока (clearfix) для корректной работы float[cite: 7] */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Шапка на всю ширину[cite: 6] */
+#main-header {
+    width: 100%;
+    background-color: #66bb6a;
+    padding: 15px 0;
+}
+
+/* Обтекание слева для логотипа и названия, как показано в примере div.html[cite: 7] */
+#logo {
+    float: left;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Круглый логотип, как на схематичном макете[cite: 6] */
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+#site-name {
+    float: left;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+/* Меню со ссылками выравнивается вправо */
+#main-nav {
+    float: right;
+    margin-top: 15px;
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#main-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Стили блоков контента (имитация голубых прямоугольников из макета) */
+.content-block {
+    background-color: #a5d6a7;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #a5d6a7;
+}
+
+/* Настройки таблицы */
+#data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #c8e6c9;
+    margin-top: 15px;
+}
+
+#data-table th,
+#data-table td {
+    border: 1px solid #c8e6c9;
+    padding: 10px;
+    text-align: left;
+}
+
+#data-table th {
+    background-color: #c8e6c9;
+    font-weight: bold;
+}
+
+/* Фон четных и нечетных строк таблицы различается[cite: 6] */
+#data-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#data-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Подвал на всю ширину окна[cite: 6] */
+#main-footer {
+    width: 100%;
+    background-color: #66bb6a;
+    padding: 20px 0;
+    margin-top: 30px;
+    clear: both;
+}
