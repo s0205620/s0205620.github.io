@@ -27,8 +27,8 @@
 
             <img src="image.jpg" usemap="#nav" width = "400" alt = "Цветок">
             <map name="nav">
-                <area shape="rect" coords="0,0,100,100" href="1.html" alt = "Квадрат">
-                <area shape="circle" coords="200,150,50" href="2.html" alt = "Круг">
+                <area shape="rect" coords="0,0,100,100" href="http://kubsu.ru" alt = "Квадрат">
+                <area shape="circle" coords="200,150,50" href="https://www.google.com/?hl=ru" alt = "Круг">
             </map>
         </li>
         <li>16.<a href="">Пустой href</a></li>
@@ -46,46 +46,46 @@
     </ul>
 
     <h2 id="my-form">Форма регистрации</h2>
-    <form action="#" method="POST">
-        <label>1. ФИО: <input type="text" name="fio"></label><br><br>
+        <form action="#" method="POST">
+        <!-- pattern разрешает только русские/английские буквы и пробелы -->
+            <label>1. ФИО: <input type="text" name="fio" pattern="[A-Za-zА-Яа-яЁё\s]+" title="Пожалуйста, используйте только буквы и пробелы" required></label>
 
-        <label>2. Телефон: <input type="tel" name="phone"></label><br><br>
+    <!-- pattern разрешает 10 цифр с возможным префиксом +7 или 8 -->
+            <label>2. Телефон: <input type="tel" name="phone" pattern="(\+7|8)?[0-9]{10}" title="Формат: +7... или 10 цифр" required></label>
 
-        <label>3. Почта: <input type="email" name="email"></label><br><br>
+    <!-- type="email" сам по себе проверяет наличие @ и формата почты -->
+            <label>3. Почта: <input type="email" name="email" required></label>
 
-        <label>4. Дата рождения: <input type="date" name="dob"></label><br><br>
+            <label>4. Дата рождения: <input type="date" name="dob"></label>
 
+            <p>5. Пол:</p>
+            <label><input type="radio" name="gender" value="m" required> Мужской</label>
+            <label><input type="radio" name="gender" value="f"> Женский</label>
 
-        <p>5. Пол:</p>
-        <label><input type="radio" name="gender" value="m"> Мужской</label>
-        <label><input type="radio" name="gender" value="f"> Женский</label><br><br>
+            <label>6. Любимый язык программирования: 
 
+            <select name="langs" multiple required>
+                <option value="c">C++</option>
+                <option value="py">Python</option>
+                <option value="Pascal">Pascal</option>
+                <option value="C">C</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="PHP">PHP</option>
+                <option value="Java">Java</option>
+                <option value="Haskel">Haskel</option>
+                <option value="Clojure">Clojure</option>
+                <option value="Prolog">Prolog</option>
+                <option value="Scala">Scala</option>
+            </select>
+            </label>
 
+            <label>7. О себе: <textarea name="bio"></textarea></label>
 
-        <label>6. Любимый язык программирования: <br>
+            <!-- required здесь гарантирует, что форму нельзя отправить без галочки -->
+            <label>8. <input type="checkbox" name="agree" required> Согласен с правилами </label>
 
-        <select name="langs" multiple>
-            <option value="c">C++</option>
-            <option value="py">Python</option>
-            <option value="Pascal">Pascal</option>
-            <option value="C">C</option>
-            <option value="JavaScript">JavaScript</option>
-            <option value="PHP">PHP</option>
-            <option value="Java">Java</option>
-            <option value="Haskel">Haskel</option>
-            <option value="Clojure">Clojure</option>
-            <option value="Prolog">Prolog</option>
-            <option value="Scala">Scala</option>
-        </select>
-        </label><br><br>
+            9. <input type="submit" value="Отправить">
 
-
-        <label>7. О себе: <textarea name="bio"></textarea></label><br><br>
-
-        <label>8. <input type="checkbox" name="agree"> Согласен с правилами </label><br><br>
-
-
-        9. <input type="submit" value="Отправить"><br><br>
     </form>
 
 </body>
