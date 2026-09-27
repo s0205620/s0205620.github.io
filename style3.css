@@ -1,0 +1,161 @@
+/* Базовые настройки */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* =========================================================
+   MOBILE FIRST (Смартфоны)
+   Первыми грузятся правила для мобильных телефонов[span_5](start_span)[span_5](end_span)
+   ========================================================= */
+
+/* Шапка, контент и футер занимают 100% ширины экрана[span_6](start_span)[span_6](end_span) */
+.container {
+    width: 100%;
+    padding: 0 15px;
+}
+
+#main-header {
+    width: 100%;
+    background-color: #66bb6a;
+    padding: 15px 0;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+#site-name {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Ссылки в главном меню выводятся вертикальным списком[span_7](start_span)[span_7](end_span) */
+#main-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 12px 0;
+    border-top: 1px solid #55a859;
+}
+
+/* Настройка Flex Box для изменения порядка блоков */
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* На смартфоне таблица визуально выше списка ссылок[span_8](start_span)[span_8](end_span) */
+#table-section {
+    order: 1; 
+}
+#links-section {
+    order: 2; 
+}
+#form-section {
+    order: 3;
+}
+
+.content-block {
+    background-color: #a5d6a7;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #7cb342;
+}
+
+/* Таблица */
+#data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #c8e6c9;
+}
+
+#data-table th, #data-table td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+}
+
+#data-table th { background-color: #a5d6a7; font-weight: bold; }
+#data-table tbody tr:nth-child(even) { background-color: #f2f2f2; }
+#data-table tbody tr:nth-child(odd) { background-color: #ffffff; }
+
+#main-footer {
+    width: 100%;
+    background-color: #66bb6a;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* =========================================================
+   MEDIA QUERY (Планшеты и десктопы)
+   Подключаются правила для остальных размеров экрана[span_9](start_span)[span_9](end_span)
+   ========================================================= */
+
+@media screen and (min-width: 800px) {
+    
+    /* Ограничение ширины до 960px и выравнивание по центру[span_10](start_span)[span_10](end_span) */
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    
+    /* Шапка принимает горизонтальный вид */
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .logo-title {
+        margin-bottom: 0;
+    }
+    
+    /* Навигация становится горизонтальной */
+    #main-nav {
+        flex-direction: row;
+        width: auto;
+    }
+    
+    #main-nav a {
+        padding: 0;
+        border: none;
+        margin-left: 20px;
+    }
+    
+    /* Возвращаем стандартный порядок блоков на десктопе[span_11](start_span)[span_11](end_span) */
+    #links-section {
+        order: 1;
+    }
+    #table-section {
+        order: 2;
+    }
+}
