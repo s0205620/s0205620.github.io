@@ -51,16 +51,16 @@
             <label>1. ФИО: <input type="text" name="fio" pattern="[A-Za-zА-Яа-яЁё\s]+" title="Пожалуйста, используйте только буквы и пробелы" required></label>
 
     <!-- pattern разрешает 10 цифр с возможным префиксом +7 или 8 -->
-            <label>2. Телефон: <input type="tel" name="phone" pattern="(\+7|8)?[0-9]{10}" title="Формат: +7... или 10 цифр" required></label>
+            <label>2. Телефон: <input type="tel" name="phone" pattern="(\+7|8)?[0-9]{10}" title="Формат: +7... или 10 цифр" required></label><br><br>
 
     <!-- type="email" сам по себе проверяет наличие @ и формата почты -->
-            <label>3. Почта: <input type="email" name="email" required></label>
+            <label>3. Почта: <input type="email" name="email" required></label><br><br>
 
-            <label>4. Дата рождения: <input type="date" name="dob"></label>
+            <label>4. Дата рождения: <input type="date" name="dob"></label><br><br>
 
             <p>5. Пол:</p>
             <label><input type="radio" name="gender" value="m" required> Мужской</label>
-            <label><input type="radio" name="gender" value="f"> Женский</label>
+            <label><input type="radio" name="gender" value="f"> Женский</label><br><br>
 
             <label>6. Любимый язык программирования: 
 
@@ -77,14 +77,14 @@
                 <option value="Prolog">Prolog</option>
                 <option value="Scala">Scala</option>
             </select>
-            </label>
+            </label><br><br>
 
-            <label>7. О себе: <textarea name="bio"></textarea></label>
+            <label>7. О себе: <textarea name="bio"></textarea></label><br><br>
 
             <!-- required здесь гарантирует, что форму нельзя отправить без галочки -->
-            <label>8. <input type="checkbox" name="agree" required> Согласен с правилами </label>
+            <label>8. <input type="checkbox" name="agree" required> Согласен с правилами </label><br><br>
 
-            9. <input type="submit" value="Отправить">
+            9. <input type="submit" value="Отправить"><br><br>
 
     </form>
 
