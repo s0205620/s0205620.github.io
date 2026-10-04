@@ -1,0 +1,22 @@
+/* Разделение содержимого и представления: только цвета и визуальные эффекты[span_19](start_span)[span_19](end_span)[span_20](start_span)[span_20](end_span) */
+/* Отступы строго контролируются классами Bootstrap в HTML[span_21](start_span)[span_21](end_span)[span_22](start_span)[span_22](end_span) */
+
+body {
+    background-color: #f4f4f4;
+}
+
+.custom-header {
+    background-color: #66bb6a;
+}
+
+.custom-block {
+    background-color: #a5d6a7;
+    border: 1px solid #7cb342;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
