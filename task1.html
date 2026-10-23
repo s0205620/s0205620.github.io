@@ -5,88 +5,95 @@
     <title>Задание 1</title>
 </head>
 <body>
-
     <h1>Список гиперссылок</h1>
     <ul>
-        <li>1.<a href="http://kubsu.ru">Главная страница сайта kubsu.ru</a></li>
-        <li>2.<a href="https://kubsu.ru">Главная страница сайта kubsu.ru https</a></li>
-        <li>3.<a href="https://kubsu.ru"><img src="image.jpg" alt="Цветок" width = "300"></a></li>
-        <li>4.<a href="page.html">Сокращенная ссылка на внутреннюю страницу</a></li>
-        <li>5.<a href="index.html">Сокращенная ссылка на главную страницу</a></li>
-        <li>6.<a href="#my-form">Ссылка на фрагмент текущей страницы</a></li>
-        <li>7.<a href="site.com?a=1&b=2&c=3">Ссылка с тремя параметрами</a></li>
-        <li>8.<a href="site.com?id=5">Ссылка с параметром айди</a></li>
-        <li>9.<a href="file.html">Относительная ссылка на страницу в текущем каталоге</a></li>
-        <li>10.<a href="about/file.html">Относительная ссылка на страницу в каталоге about</a></li>
-        <li>11.<a href="../file.html">Относительная страница уровнем выше текущей</a></li>
-        <li>12.<a href="../../file.html">Относительная страница на два уровня выше текущей</a></li>
-        <li>13.Какой-нибудь текст, и тут <a href="site.com">контекстная ссылка</a>.</li>
-        <li>14.<a href="site.com#history">Ссылка на фрагмент чужого сайта</a></li>
+        <li>1. <a href="http://kubsu.ru">Главная страница сайта kubsu.ru</a></li>
+        <li>2. <a href="https://kubsu.ru">Главная страница сайта kubsu.ru https</a></li>
+        <li>3. <a href="https://kubsu.ru"><img src="image.jpg" alt="Цветок" width="150"></a></li>
+        <!-- Все внутренние ссылки теперь ведут на пустую страницу blank.html, чтобы не было ошибки 404 -->
+        <li>4. <a href="blank.html">Сокращенная ссылка на внутреннюю страницу</a></li>
+        <li>5. <a href="index.html">Сокращенная ссылка на главную страницу</a></li>
+        <li>6. <a href="#form-section">Ссылка на фрагмент текущей страницы</a></li>
+        
+        <!-- Ссылки с параметрами. Параметры меняют URL, но открывают белую страницу -->
+        <li>7. <a href="blank.html?a=1&b=2&c=3">Ссылка с тремя параметрами</a></li>
+        <li>8. <a href="blank.html?id=5">Ссылка с параметром айди</a></li>
+        
+        <li>9. <a href="blank.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+        <li>10. <a href="about/blank.html">Относительная ссылка на страницу в каталоге about</a></li>
+        <li>11. <a href="../blank.html">Относительная страница уровнем выше текущей</a></li>
+        <li>12. <a href="../../blank.html">Относительная страница на два уровня выше текущей</a></li>
+        <li>13. Какой-нибудь текст, и тут <a href="blank.html">контекстная ссылка</a>.</li>
+        <li>14. <a href="blank.html#history">Ссылка на фрагмент чужого сайта</a></li>
         <li>
-            15.
-
-            <img src="image.jpg" usemap="#nav" width = "400" alt = "Цветок">
+            15. Кликабельная картинка:
+            <br>
+            <img src="image.jpg" usemap="#nav" alt="Цветок" width="200">
             <map name="nav">
-                <area shape="rect" coords="0,0,100,100" href="http://kubsu.ru" alt = "Квадрат">
-                <area shape="circle" coords="200,150,50" href="https://www.google.com/?hl=ru" alt = "Круг">
+                <area shape="rect" coords="0,0,100,100" href="blank.html" alt="Квадрат">
+                <area shape="circle" coords="150,150,50" href="blank.html" alt="Круг">
             </map>
         </li>
-        <li>16.<a href="">Пустой href</a></li>
-        <li>17.<a>Без href</a></li>
-        <li>18.<a href="site.com" rel="nofollow">Не для поисковиков</a></li>
-        <li>19.<a href="site.com" rel="nofollow">Без индексации</a></li>
+        <li>16. <a href="">Пустой href</a></li>
+        <li>17. <a>Без href</a></li>
+        <li>18. <a href="blank.html" rel="nofollow">Не для поисковиков</a></li>
+        <li>19. <a href="blank.html" rel="nofollow">Без индексации</a></li>
         <li>
             20. Список с подсказками:
             <ol>
-                <li><a href="1.html" title="Жми сюда">Первая ссылка</a></li>
-                <li><a href="2.html" title="Жми сюда">Вторая ссылка</a></li>
+                <li><a href="blank.html" title="Первая пустая страница">Первая ссылка</a></li>
+                <li><a href="blank.html" title="Вторая пустая страница">Вторая ссылка</a></li>
             </ol>
         </li>
-        <li>21.<a href="ftp://ftp.com/file.zip">FTP ссылка</a></li>
+        <li>21. <a href="ftp://ftp.com/file.zip">FTP ссылка</a></li>
     </ul>
 
-    <h2 id="my-form">Форма регистрации</h2>
-        <form action="#" method="POST">
-        <!-- pattern разрешает только русские/английские буквы и пробелы -->
-            <label>1. ФИО: <input type="text" name="fio" pattern="[A-Za-zА-Яа-яЁё\s]+" title="Пожалуйста, используйте только буквы и пробелы" required></label><br><br>
+    <h2 id="form-section">Форма регистрации</h2>
+    
+    <!-- method="GET" отправляет данные прямо в URL, а action="blank.html" открывает белую страницу -->
+    <form action="blank.html" method="GET">
+        
+        <!-- pattern жестко требует 3 слова с заглавной буквы, только буквы и пробелы -->
+        <label>1. ФИО: 
+            <input type="text" name="fio" pattern="^[А-ЯЁA-Z][а-яёa-z]+\s[А-ЯЁA-Z][а-яёa-z]+\s[А-ЯЁA-Z][а-яёa-z]+$" title="Введите ровно 3 слова, каждое с большой буквы (например: Иванов Иван Иванович). Цифры запрещены." required>
+        </label><br><br>
+        
+        <label>2. Телефон: 
+            <input type="tel" name="phone" pattern="(\+7|8)?[0-9]{10}" title="Формат: +7... или 10 цифр" required>
+        </label><br><br>
 
-    <!-- pattern разрешает 10 цифр с возможным префиксом +7 или 8 -->
-            <label>2. Телефон: <input type="tel" name="phone" pattern="(\+7|8)?[0-9]{10}" title="Формат: +7... или 10 цифр" required></label><br><br>
+        <label>3. Почта: 
+            <input type="email" name="email" required>
+        </label><br><br>
 
-    <!-- type="email" сам по себе проверяет наличие @ и формата почты -->
-            <label>3. Почта: <input type="email" name="email" required></label><br><br>
+        <!-- onfocus динамически подставляет сегодняшний день как максимальную дату -->
+        <label>4. Дата рождения: 
+            <input type="date" name="dob" onfocus="this.max=new Date().toISOString().split('T')[0]" required>
+        </label><br><br>
 
-            <label>4. Дата рождения: <input type="date" name="dob"></label><br><br>
+        <p>5. Пол:</p>
+        <label><input type="radio" name="gender" value="m" required> Мужской</label>
+        <label><input type="radio" name="gender" value="f"> Женский</label><br><br>
 
-            <p>5. Пол:</p>
-            <label><input type="radio" name="gender" value="m" required> Мужской</label>
-            <label><input type="radio" name="gender" value="f"> Женский</label><br><br>
-
-            <label>6. Любимый язык программирования: 
-
+        <label>6. Любимый язык программирования:<br>
             <select name="langs" multiple required>
                 <option value="c">C++</option>
                 <option value="py">Python</option>
                 <option value="Pascal">Pascal</option>
-                <option value="C">C</option>
                 <option value="JavaScript">JavaScript</option>
                 <option value="PHP">PHP</option>
-                <option value="Java">Java</option>
-                <option value="Haskel">Haskel</option>
-                <option value="Clojure">Clojure</option>
-                <option value="Prolog">Prolog</option>
-                <option value="Scala">Scala</option>
             </select>
-            </label><br><br>
+        </label><br><br>
 
-            <label>7. О себе: <textarea name="bio"></textarea></label><br><br>
+        <label>7. О себе: <br>
+            <textarea name="bio"></textarea>
+        </label><br><br>
 
-            <!-- required здесь гарантирует, что форму нельзя отправить без галочки -->
-            <label>8. <input type="checkbox" name="agree" required> Согласен с правилами </label><br><br>
+        <label>8. 
+            <input type="checkbox" name="agree" required> Согласен с правилами 
+        </label><br><br>
 
-            <button type="submit">Отправить</button>
-
+        <input type="submit" value="9. Отправить">
     </form>
-
 </body>
 </html>
