@@ -39,42 +39,47 @@
                 <!-- Отступы p-4 средствами фреймворка -->
                 <div class="custom-block p-4 rounded">
                     <h2 class="h4 mb-3">Список гиперссылок</h2>
-                    <ul class="pl-3 text-break">
-                        <li>1. <a href="http://kubsu.ru">Главная страница сайта kubsu.ru</a></li>
-                        <li>2. <a href="https://kubsu.ru">Главная страница сайта kubsu.ru https</a></li>
-                        <li>3. <a href="https://kubsu.ru"><img src="image.jpg" alt="Цветок" class="img-fluid" style="max-width: 300px;"></a></li>
-                        <li>4. <a href="page.html">Сокращенная ссылка на внутреннюю страницу</a></li>
-                        <li>5. <a href="index.html">Сокращенная ссылка на главную страницу</a></li>
-                        <li>6. <a href="#form-section">Ссылка на фрагмент текущей страницы</a></li>
-                        <li>7. <a href="site.com?a=1&b=2&c=3">Ссылка с тремя параметрами</a></li>
-                        <li>8. <a href="site.com?id=5">Ссылка с параметром айди</a></li>
-                        <li>9. <a href="file.html">Относительная ссылка на страницу в текущем каталоге</a></li>
-                        <li>10. <a href="about/file.html">Относительная ссылка на страницу в каталоге about</a></li>
-                        <li>11. <a href="../file.html">Относительная страница уровнем выше текущей</a></li>
-                        <li>12. <a href="../../file.html">Относительная страница на два уровня выше текущей</a></li>
-                        <li>13. Какой-нибудь текст, и тут <a href="site.com">контекстная ссылка</a>.</li>
-                        <li>14. <a href="site.com#history">Ссылка на фрагмент чужого сайта</a></li>
-                        <li>
-                            15.
-                            <img src="image.jpg" usemap="#nav" alt="Цветок" class="img-fluid mt-2 mb-2" style="max-width: 400px;">
-                            <map name="nav">
-                                <area shape="rect" coords="0,0,100,100" href="1.html" alt="Квадрат">
-                                <area shape="circle" coords="200,150,50" href="2.html" alt="Круг">
-                            </map>
-                        </li>
-                        <li>16. <a href="">Пустой href</a></li>
-                        <li>17. <a>Без href</a></li>
-                        <li>18. <a href="site.com" rel="nofollow">Не для поисковиков</a></li>
-                        <li>19. <a href="site.com" rel="nofollow">Без индексации</a></li>
-                        <li>
-                            20. Список с подсказками:
-                            <ol class="pl-3 mt-2">
-                                <li><a href="1.html" title="Жми сюда">Первая ссылка</a></li>
-                                <li><a href="2.html" title="Жми сюда">Вторая ссылка</a></li>
-                            </ol>
-                        </li>
-                        <li>21. <a href="ftp://ftp.com/file.zip">FTP ссылка</a></li>
-                    </ul>
+                        <ul>
+        <li>1. <a href="http://kubsu.ru">Главная страница сайта kubsu.ru</a></li>
+        <li>2. <a href="https://kubsu.ru">Главная страница сайта kubsu.ru https</a></li>
+        <li>3. <a href="https://kubsu.ru"><img src="image.jpg" alt="Цветок" width="150"></a></li>
+        
+        <!-- Ссылки теперь ведут на файлы с текстом -->
+        <li>4. <a href="page-internal.html">Сокращенная ссылка на внутреннюю страницу</a></li>
+        <li>5. <a href="page-main.html">Сокращенная ссылка на главную страницу</a></li>
+        <li>6. <a href="#form-section">Ссылка на фрагмент текущей страницы</a></li>
+        
+        <li>7. <a href="page-internal.html?a=1&b=2&c=3">Ссылка с тремя параметрами</a></li>
+        <li>8. <a href="page-internal.html?id=5">Ссылка с параметром айди</a></li>
+        
+        <li>9. <a href="page-current.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+        <li>10. <a href="about/blank.html">Относительная ссылка на страницу в каталоге about</a></li>
+        <li>11. <a href="../page-current.html">Относительная страница уровнем выше текущей</a></li>
+        <li>12. <a href="../../page-current.html">Относительная страница на два уровня выше текущей</a></li>
+        <li>13. Какой-нибудь текст, и тут <a href="page-internal.html">контекстная ссылка</a>.</li>
+        <li>14. <a href="page-internal.html#history">Ссылка на фрагмент чужого сайта</a></li>
+        <li>
+            15. Кликабельная картинка:
+            <br>
+            <img src="image.jpg" usemap="#nav" alt="Цветок" width="200">
+            <map name="nav">
+                <area shape="rect" coords="0,0,100,100" href="page-internal.html" alt="Квадрат">
+                <area shape="circle" coords="150,150,50" href="page-internal.html" alt="Круг">
+            </map>
+        </li>
+        <li>16. <a href="">Пустой href</a></li>
+        <li>17. <a>Без href</a></li>
+        <li>18. <a href="page-internal.html" rel="nofollow">Не для поисковиков</a></li>
+        <li>19. <a href="page-internal.html" rel="nofollow">Без индексации</a></li>
+        <li>
+            20. Список с подсказками:
+            <ol>
+                <li><a href="page-internal.html" title="Первая страница">Первая ссылка</a></li>
+                <li><a href="page-internal.html" title="Вторая страница">Вторая ссылка</a></li>
+            </ol>
+        </li>
+        <li>21. <a href="ftp://ftp.com/file.zip">FTP ссылка</a></li>
+    </ul>
                 </div>
             </section>
 
@@ -131,62 +136,57 @@
             <section class="col-12 order-3" id="form-section">
                 <div class="custom-block p-4 rounded">
                     <h2 class="h4 mb-3">Форма регистрации</h2>
-                    <form action="#" method="POST">
-                        <div class="form-group">
-                            <label>1. ФИО:</label>
-                            <input type="text" name="fio" class="form-control" pattern="[A-Za-zА-Яа-яЁё\s]+" title="Только буквы и пробелы" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>2. Телефон:</label>
-                            <input type="tel" name="phone" class="form-control" pattern="(\+7|8)?[0-9]{10}" title="Формат: +7... или 10 цифр" required>
-                             </div>
+                    <form action="blank.html" method="GET">
+    <div class="mb-3">
+        <label>1. ФИО:</label>
+        <input type="text" name="fio" class="form-control" pattern="^[А-ЯЁA-Z][а-яёa-z]+\s[А-ЯЁA-Z][а-яёa-z]+\s[А-ЯЁA-Z][а-яёa-z]+$" title="Введите ровно 3 слова, каждое с большой буквы (например: Иванов Иван Иванович). Цифры запрещены." required>
+    </div>
+    
+    <div class="mb-3">
+        <label>2. Телефон:</label>
+        <input type="tel" name="phone" class="form-control" pattern="(\+7|8)?[0-9]{10}" title="Формат: +7... или 10 цифр" required>
+    </div>
 
-                        <div class="form-group">
-                            <label>3. Почта:</label>
-                            <input type="email" name="email" class="form-control" required>
-                        </div>
+    <div class="mb-3">
+        <label>3. Почта:</label>
+        <input type="email" name="email" class="form-control" required>
+    </div>
 
-                        <div class="form-group">
-                            <label>4. Дата рождения:</label>
-                            <input type="date" name="dob" class="form-control">
-                        </div>
+    <div class="mb-3">
+        <label>4. Дата рождения:</label>
+        <input type="date" name="dob" class="form-control" onfocus="this.max=new Date().toISOString().split('T')[0]" required>
+    </div>
 
-                        <div class="form-group">
-                            <p class="mb-2">5. Пол:</p>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender" value="m" id="genderM" required>
-                                <label class="form-check-label" for="genderM">Мужской</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender" value="f" id="genderF">
-                                <label class="form-check-label" for="genderF">Женский</label>
-                            </div>
-                        </div>
+    <div class="mb-3">
+        <p class="mb-1">5. Пол:</p>
+        <label><input type="radio" name="gender" value="m" required> Мужской</label>
+        <label class="ml-3"><input type="radio" name="gender" value="f"> Женский</label>
+    </div>
 
-                        <div class="form-group">
-                            <label>6. Любимый язык программирования:</label>
-                            <select name="langs" class="form-control" multiple required>
-                                <option value="c">C++</option>
-                                <option value="py">Python</option>
-                                <option value="Pascal">Pascal</option>
-                                <option value="JavaScript">JavaScript</option>
-                                <option value="PHP">PHP</option>
-                            </select>
-                        </div>
+    <div class="mb-3">
+        <label>6. Любимый язык программирования:</label>
+        <select name="langs" class="form-control" multiple required>
+            <option value="c">C++</option>
+            <option value="py">Python</option>
+            <option value="Pascal">Pascal</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="PHP">PHP</option>
+        </select>
+    </div>
 
-                        <div class="form-group">
-                            <label>7. О себе:</label>
-                            <textarea name="bio" class="form-control" rows="3"></textarea>
-                        </div>
+    <div class="mb-3">
+        <label>7. О себе:</label>
+        <textarea name="bio" class="form-control" rows="3"></textarea>
+    </div>
 
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" name="agree" id="agreeCheck" required>
-                            <label class="form-check-label" for="agreeCheck">8. Согласен с правилами</label>
-                        </div>
+    <div class="mb-3">
+        <label>
+            <input type="checkbox" name="agree" required> 8. Согласен с правилами 
+        </label>
+    </div>
 
-                        <button type="submit" class="btn btn-success mt-2">9. Отправить</button>
-                    </form>
+    <button type="submit" class="btn btn-success">9. Отправить</button>
+</form>
                 </div>
             </section>
         </div>
