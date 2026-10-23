@@ -10,39 +10,39 @@
         <li>1. <a href="http://kubsu.ru">Главная страница сайта kubsu.ru</a></li>
         <li>2. <a href="https://kubsu.ru">Главная страница сайта kubsu.ru https</a></li>
         <li>3. <a href="https://kubsu.ru"><img src="image.jpg" alt="Цветок" width="150"></a></li>
-        <!-- Все внутренние ссылки теперь ведут на пустую страницу blank.html, чтобы не было ошибки 404 -->
-        <li>4. <a href="blank.html">Сокращенная ссылка на внутреннюю страницу</a></li>
-        <li>5. <a href="blank.html">Сокращенная ссылка на главную страницу</a></li>
+        
+        <!-- Ссылки теперь ведут на файлы с текстом -->
+        <li>4. <a href="page-internal.html">Сокращенная ссылка на внутреннюю страницу</a></li>
+        <li>5. <a href="page-main.html">Сокращенная ссылка на главную страницу</a></li>
         <li>6. <a href="#form-section">Ссылка на фрагмент текущей страницы</a></li>
         
-        <!-- Ссылки с параметрами. Параметры меняют URL, но открывают белую страницу -->
-        <li>7. <a href="blank.html?a=1&b=2&c=3">Ссылка с тремя параметрами</a></li>
-        <li>8. <a href="blank.html?id=5">Ссылка с параметром айди</a></li>
+        <li>7. <a href="page-internal.html?a=1&b=2&c=3">Ссылка с тремя параметрами</a></li>
+        <li>8. <a href="page-internal.html?id=5">Ссылка с параметром айди</a></li>
         
-        <li>9. <a href="blank.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+        <li>9. <a href="page-current.html">Относительная ссылка на страницу в текущем каталоге</a></li>
         <li>10. <a href="about/blank.html">Относительная ссылка на страницу в каталоге about</a></li>
-        <li>11. <a href="../blank.html">Относительная страница уровнем выше текущей</a></li>
-        <li>12. <a href="../../blank.html">Относительная страница на два уровня выше текущей</a></li>
-        <li>13. Какой-нибудь текст, и тут <a href="blank.html">контекстная ссылка</a>.</li>
-        <li>14. <a href="blank.html#history">Ссылка на фрагмент чужого сайта</a></li>
+        <li>11. <a href="../page-current.html">Относительная страница уровнем выше текущей</a></li>
+        <li>12. <a href="../../page-current.html">Относительная страница на два уровня выше текущей</a></li>
+        <li>13. Какой-нибудь текст, и тут <a href="page-internal.html">контекстная ссылка</a>.</li>
+        <li>14. <a href="page-internal.html#history">Ссылка на фрагмент чужого сайта</a></li>
         <li>
             15. Кликабельная картинка:
             <br>
             <img src="image.jpg" usemap="#nav" alt="Цветок" width="200">
             <map name="nav">
-                <area shape="rect" coords="0,0,100,100" href="blank.html" alt="Квадрат">
-                <area shape="circle" coords="150,150,50" href="blank.html" alt="Круг">
+                <area shape="rect" coords="0,0,100,100" href="page-internal.html" alt="Квадрат">
+                <area shape="circle" coords="150,150,50" href="page-internal.html" alt="Круг">
             </map>
         </li>
         <li>16. <a href="">Пустой href</a></li>
         <li>17. <a>Без href</a></li>
-        <li>18. <a href="blank.html" rel="nofollow">Не для поисковиков</a></li>
-        <li>19. <a href="blank.html" rel="nofollow">Без индексации</a></li>
+        <li>18. <a href="page-internal.html" rel="nofollow">Не для поисковиков</a></li>
+        <li>19. <a href="page-internal.html" rel="nofollow">Без индексации</a></li>
         <li>
             20. Список с подсказками:
             <ol>
-                <li><a href="blank.html" title="Первая пустая страница">Первая ссылка</a></li>
-                <li><a href="blank.html" title="Вторая пустая страница">Вторая ссылка</a></li>
+                <li><a href="page-internal.html" title="Первая страница">Первая ссылка</a></li>
+                <li><a href="page-internal.html" title="Вторая страница">Вторая ссылка</a></li>
             </ol>
         </li>
         <li>21. <a href="ftp://ftp.com/file.zip">FTP ссылка</a></li>
@@ -50,10 +50,8 @@
 
     <h2 id="form-section">Форма регистрации</h2>
     
-    <!-- method="GET" отправляет данные прямо в URL, а action="blank.html" открывает белую страницу -->
+    <!-- Форма отправляет данные на пустой файл blank.html -->
     <form action="blank.html" method="GET">
-        
-        <!-- pattern жестко требует 3 слова с заглавной буквы, только буквы и пробелы -->
         <label>1. ФИО: 
             <input type="text" name="fio" pattern="^[А-ЯЁA-Z][а-яёa-z]+\s[А-ЯЁA-Z][а-яёa-z]+\s[А-ЯЁA-Z][а-яёa-z]+$" title="Введите ровно 3 слова, каждое с большой буквы (например: Иванов Иван Иванович). Цифры запрещены." required>
         </label><br><br>
@@ -66,7 +64,6 @@
             <input type="email" name="email" required>
         </label><br><br>
 
-        <!-- onfocus динамически подставляет сегодняшний день как максимальную дату -->
         <label>4. Дата рождения: 
             <input type="date" name="dob" onfocus="this.max=new Date().toISOString().split('T')[0]" required>
         </label><br><br>
