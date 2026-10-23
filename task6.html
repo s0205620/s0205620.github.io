@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 6 - Калькулятор услуг</title>
+    <script src="script6.js" defer></script>
+</head>
+<body>
+    <h1>Калькулятор стоимости услуги</h1>
+    
+    <form id="calc-form">
+        <label>Количество:
+            <input type="number" id="quantity" value="1" min="1">
+        </label>
+        <br><br>
+
+        <p>Выберите тип услуги:</p>
+        <label><input type="radio" name="serviceType" value="1" checked> Тип 1 (Базовая услуга - 1000 руб.)</label><br>
+        <label><input type="radio" name="serviceType" value="2"> Тип 2 (Услуга с опциями - 2000 руб.)</label><br>
+        <label><input type="radio" name="serviceType" value="3"> Тип 3 (Услуга со свойством - 3000 руб.)</label><br>
+        <br>
+
+        <div id="option-container" style="display: none;">
+            <label>Выберите опцию:
+                <select id="service-option">
+                    <option value="500">Опция 1 (+ 500 руб.)</option>
+                    <option value="1200">Опция 2 (+ 1200 руб.)</option>
+                    <option value="2000">Опция 3 (+ 2000 руб.)</option>
+                </select>
+            </label>
+            <br><br>
+        </div>
+
+        <div id="property-container" style="display: none;">
+            <label>
+                <input type="checkbox" id="service-property" value="800">
+                Добавить специальное свойство (+ 800 руб.)
+            </label>
+            <br><br>
+        </div>
+    </form>
+
+    <div id="result" style="font-weight: bold; font-size: 1.2em;"></div>
+</body>
+</html>
