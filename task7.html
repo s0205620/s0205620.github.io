@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 7 - Галерея</title>
+    
+    <!-- Подключение базовых стилей Slick Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        .gallery-container {
+            width: 80%;
+            margin: 40px auto;
+        }
+        .slick-slide img {
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        /* Делаем иконки стрелок темными, чтобы они не сливались с белым фоном */
+        .slick-prev:before, .slick-next:before {
+            color: #333;
+        }
+    </style>
+
+    <!-- Подключение jQuery (требуется для Slick) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <!-- Подключение плагина Slick Slider -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+    <!-- Подключение нашего скрипта -->
+    <script src="script7.js" defer></script>
+</head>
+<body>
+    <h1 style="text-align: center;">Галерея изображений</h1>
+    
+    <div class="gallery-container">
+        <!-- Блок галереи из 8 изображений -->
+        <div class="my-gallery">
+            <div><img src="https://via.placeholder.com/600x400/FFB6C1/000000?text=Слайд+1" alt="Слайд 1"></div>
+            <div><img src="https://via.placeholder.com/600x400/87CEFA/000000?text=Слайд+2" alt="Слайд 2"></div>
+            <div><img src="https://via.placeholder.com/600x400/98FB98/000000?text=Слайд+3" alt="Слайд 3"></div>
+            <div><img src="https://via.placeholder.com/600x400/FFD700/000000?text=Слайд+4" alt="Слайд 4"></div>
+            <div><img src="https://via.placeholder.com/600x400/FFA07A/000000?text=Слайд+5" alt="Слайд 5"></div>
+            <div><img src="https://via.placeholder.com/600x400/DDA0DD/000000?text=Слайд+6" alt="Слайд 6"></div>
+            <div><img src="https://via.placeholder.com/600x400/20B2AA/000000?text=Слайд+7" alt="Слайд 7"></div>
+            <div><img src="https://via.placeholder.com/600x400/F08080/000000?text=Слайд+8" alt="Слайд 8"></div>
+        </div>
+    </div>
+</body>
+</html>
